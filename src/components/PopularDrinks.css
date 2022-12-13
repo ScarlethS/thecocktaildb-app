@@ -1,0 +1,32 @@
+.alcoholic-drinks{
+    background-color: #5893D4;
+    max-width: 20em;
+}
+
+.imagedrink img{
+    border-radius: 15px;
+    height: 19em;
+    padding: 0.5em;
+}
+
+.info-drink-alcoholic{
+    font-size: 1em;
+    text-align: center;
+}
+
+h2{
+    margin: 0;
+    color: #1F3C88;
+    padding: 4px;
+}
+
+/* .popular-drink{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    max-width: 1000px;
+}
+ */
