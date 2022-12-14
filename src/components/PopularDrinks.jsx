@@ -2,7 +2,21 @@ import React, { useState, useEffect } from "react";
 import "./PopularDrinks.css";
 
 const PopularDrinks = () => {
-  const [popularDrink, setPopularDrink] = useState([]);
+  const [popularCocktail, setPopularDrink] = useState([]);
+  const [searchCocktail, setSearchCocktail] = useState("");
+
+  const searchBox = (e) => {
+    setSearchCocktail(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const searchResult = !searchBox
+    ? popularCocktail
+    : popularCocktail.filter((dataDrink) =>
+        dataDrink.strDrink
+          .toLowerCase()
+          .includes(searchCocktail.toLocaleLowerCase())
+      );
 
   useEffect(() => {
     const getPopularDrinks = async () => {
@@ -13,10 +27,9 @@ const PopularDrinks = () => {
         }
       );
       const result = await popularDrinksFetched.json();
-      setPopularDrink(Object.values(result.drinks).slice(0, 8));
+      setPopularDrink(Object.values(result.drinks).slice(0, 20));
     };
     console.log("Hicimos la peticion HTTP");
-    console.log(popularDrink);
     getPopularDrinks();
 
     return () => {
@@ -25,26 +38,29 @@ const PopularDrinks = () => {
   }, []);
 
   return (
-    <div className="popular-box">
-      {popularDrink.map((item) => {
-        return (
-          <div className="alcoholic-drinks">
-            <div className="imagedrink">
-              <img src={item.strDrinkThumb} />
+    <>
+      <input
+        type="text"
+        placeholder="Search by Cocktail Name"
+        className="search-box-input"
+        value={searchCocktail}
+        onChange={searchBox}
+      ></input>
+      <div className="popular-box">
+        {searchResult.map((drinks) => {
+          return (
+            <div className="alcoholic-drinks" key={drinks.idDrink}>
+              <div className="imagedrink">
+                <img src={drinks.strDrinkThumb} />
+              </div>
+              <div className="info-drink-alcoholic">
+                <h2>{drinks.strDrink}</h2>
+              </div>
             </div>
-            <div className="info-drink-alcoholic">
-              <h2>{item.strDrink}</h2>
-            </div>
-          </div>
-        );
-      })}
-
-      {/* {popularDrink.map((it) =>(
-        <ul key={it.drinks[]}>
-            <li>{}</li>
-        </ul>
-      ))} */}
-    </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

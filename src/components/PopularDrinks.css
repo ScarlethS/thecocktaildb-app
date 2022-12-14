@@ -1,32 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Manrope:wght@500;600&family=Poppins:wght@400;600;700&display=swap');
+
 .alcoholic-drinks{
-    background-color: #5893D4;
+    background-color: #0f0e0e;
     max-width: 20em;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 5px 11px #000000;
+    cursor: pointer;
+    min-height: 23em;
+    font-family: 'Lora', serif;
+    font-style: italic;
+}
+
+.alcoholic-drinks:hover{
+    transform: scale(1.05);
 }
 
 .imagedrink img{
-    border-radius: 15px;
-    height: 19em;
-    padding: 0.5em;
+    width: 100%;
 }
 
 .info-drink-alcoholic{
-    font-size: 1em;
-    text-align: center;
+    height: 3em;    
 }
 
-h2{
-    margin: 0;
-    color: #1F3C88;
-    padding: 4px;
-}
-
-/* .popular-drink{
+.popular-box{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1em;
-    max-width: 1000px;
+    gap: 2em;
+    padding: 2em 0;
 }
- */
+
+.popular-box::after {
+    content: "";
+    width: 20em;
+}
+
+.search-box-input{
+    height: 50px;
+    width: 400px;
+    border: none;
+    border-radius: 15px;
+    padding: 0 1rem;
+}
