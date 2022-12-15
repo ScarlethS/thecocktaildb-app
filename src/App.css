@@ -39,3 +39,21 @@
 .read-the-docs {
   color: #888;
 }
+
+.buttonChange{
+  background-color: #9b1747;
+    width: 300px;
+    border-radius: 14px;
+    height: 3em;
+    border: none;
+    color: #ededed;
+}
+
+.buttonChange2{
+  background-color: #9b1747;
+  width: 300px;
+  border-radius: 14px;
+  height: 3em;
+  border: none;
+  color: #ededed;
+}
