@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./DrinksCardsStyle.css";
+import MuiLinearProgress from "./MuiLinearProgress";
 
 const DrinksCards = ({ drinksProps = [] }) => {
   const [searchCocktail, setSearchCocktail] = useState("");
@@ -36,7 +37,17 @@ const DrinksCards = ({ drinksProps = [] }) => {
             );
           })
         ) : (
-          <h1>No drinks</h1>
+          <>
+            <div className="cards-drinks">
+              <MuiLinearProgress />
+            </div>
+            <div className="cards-drinks">
+              <MuiLinearProgress />
+            </div>
+            <div className="cards-drinks">
+              <MuiLinearProgress />
+            </div>
+          </>
         )}
       </div>
     </>
