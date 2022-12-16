@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Manrope:wght@500;600&family=Poppins:wght@400;600;700&display=swap');
 
-.alcoholic-drinks{
+.cards-drinks{
     background-color: #0f0e0e;
     max-width: 20em;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 5px 5px 11px #000000;
     cursor: pointer;
-    min-height: 23em;
+    max-height: 25em;
     font-family: 'Lora', serif;
     font-style: italic;
 }
 
-.alcoholic-drinks:hover{
+.cards-drinks:hover{
     transform: scale(1.05);
 }
 
@@ -20,23 +20,15 @@
     width: 100%;
 }
 
-.info-drink-alcoholic{
+.info-drinks{
     height: 3em;    
 }
 
-.popular-box{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-    padding: 2em 0;
-}
-
-.popular-box::after {
-    content: "";
-    width: 20em;
+.container-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    margin: 3rem 0;
 }
 
 .search-box-input{

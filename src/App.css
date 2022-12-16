@@ -42,18 +42,22 @@
 
 .buttonChange{
   background-color: #9b1747;
-    width: 300px;
-    border-radius: 14px;
-    height: 3em;
-    border: none;
-    color: #ededed;
-}
-
-.buttonChange2{
-  background-color: #9b1747;
   width: 300px;
   border-radius: 14px;
   height: 3em;
   border: none;
   color: #ededed;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.buttonChange:hover{
+  background-color: #000;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 2px 2px 6px 2px #7c7a7a;
+}
+
+.container-button{
+  padding: 2em;
 }
