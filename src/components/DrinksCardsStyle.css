@@ -6,14 +6,9 @@
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 5px 5px 11px #000000;
-    cursor: pointer;
     max-height: 25em;
     font-family: 'Lora', serif;
     font-style: italic;
-}
-
-.cards-drinks:hover{
-    transform: scale(1.05);
 }
 
 .imageDrink img{
