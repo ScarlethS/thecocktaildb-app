@@ -26,20 +26,38 @@
 
 .container-cards{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
     gap: 3rem;
-    margin: 3rem 0;
+    margin: 3rem 1em;
+    
 }
 
 .search-box-input{
     height: 50px;
-    width: 400px;
+    width: 200px;
     border: none;
     border-radius: 15px;
     padding: 0 1rem;
 }
 
+.container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 768px){
+    .container-cards{
+        grid-template-columns: repeat(2,1fr);
+        margin: 3rem 0;
+    }
+
+    .search-box-input{
+        min-width: 400px;
+    }
+}
+
+@media (min-width: 1200px){
     .container-cards{
         grid-template-columns: repeat(3,1fr);
     }
