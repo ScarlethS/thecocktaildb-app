@@ -28,7 +28,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  width: 59vh;
+  min-width: 32vh;
   min-height: 100vh;
   background-image: linear-gradient(180deg, #131212, #2f3543)
 }
